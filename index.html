@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favicon.png"
+      type="image/png"
+    />
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+    <link rel="stylesheet" href="./main.css" />
+    <script src="./main.js" defer></script>
+  </head>
+  <body>
+    <main class="root">
+      <section class="newsletter">
+        <div class="newsletter_left">
+          <h3 class="newsletter_title">Stay updated!</h3>
+          <p class="newsletter_description">
+            Join 60,000+ product managers receiving monthly updates on:
+          </p>
+          <ul class="newsletter_features">
+            <li class="feature">
+              <img
+                class="feature_img"
+                src="./assets/images/icon-list.svg"
+                alt="Tick Mark Icon"
+              />
+              <p class="feature_summary">
+                Product discovery and building what matters
+              </p>
+            </li>
+            <li class="feature">
+              <img
+                class="feature_img"
+                src="./assets/images/icon-list.svg"
+                alt="Tick Mark Icon"
+              />
+              <p class="feature_summary">
+                Measuring to ensure updates are a success
+              </p>
+            </li>
+            <li class="feature">
+              <img
+                class="feature_img"
+                src="./assets/images/icon-list.svg"
+                alt="Tick Mark Icon"
+              />
+              <p class="feature_summary">And much more!</p>
+            </li>
+          </ul>
+          <form class="newsletter_form">
+            <div class="form-control">
+              <div class="form-control_label">
+                <label for="email">Email</label>
+                <span>Valid email required</span>
+              </div>
+              <input
+                type="text"
+                name="email"
+                id="email"
+                placeholder="email@company.com"
+              />
+            </div>
+            <button class="btn-primary" type="submit">Subscribe</button>
+          </form>
+        </div>
+        <div class="newsletter_right">
+          <picture>
+            <source
+              media="(min-width: 50em)"
+              srcset="./assets/images/illustration-sign-up-desktop.svg"
+            />
+            <source
+              media="(min-width: 20em)"
+              srcset="./assets/images/illustration-sign-up-mobile.svg"
+            />
+            <img
+              src="./assets/images/illustration-sign-up-desktop.svg"
+              alt="Newsletter Image"
+            />
+          </picture>
+        </div>
+      </section>
+      <section class="feedback d-none">
+        <div class="feedback_header">
+          <img src="./assets/images/icon-success.svg" alt="Success Icon" />
+          <h1 class="header_title">Thanks for subscribing!</h1>
+          <p class="header_description">
+            A confirmation email has been sent to
+            <strong>ash@loremcompany.com</strong>. Please open it and click the
+            button inside to confirm your subscription
+          </p>
+        </div>
+        <button class="btn-primary" type="button">Dismiss</button>
+      </section>
+    </main>
+  </body>
+</html>

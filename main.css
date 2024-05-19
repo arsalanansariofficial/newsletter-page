@@ -1,0 +1,251 @@
+@font-face {
+  font-family: Roboto;
+  src: url('./assets/fonts/Roboto-Regular.ttf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url('./assets/fonts/Roboto-Bold.ttf');
+  font-weight: 700;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* Primary */
+  --Tomato: hsl(4, 100%, 67%);
+  --Tomato-Shadow: rgba(255, 98, 87, 0.4);
+
+  /* Neutral */
+  --Grey: hsl(231, 7%, 60%);
+  --White: hsl(0, 0%, 100%);
+  --Charcoal-Grey: hsl(235, 18%, 26%);
+  --Dark-Slate-Grey: hsl(234, 29%, 20%);
+
+  font-family: Roboto, sans-serif;
+
+  @media (min-width: 50em) {
+    background: var(--Charcoal-Grey);
+  }
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.d-block {
+  display: block !important;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.d-none {
+  display: none !important;
+}
+
+.btn-primary {
+  color: var(--White);
+  background: var(--Dark-Slate-Grey);
+  border: none;
+  border-radius: 0.5em;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 1em;
+  padding: 1em;
+  width: 100%;
+  display: block;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  color: var(--White);
+  background: var(--Tomato);
+  box-shadow: 2px 2px 10px 0 var(--Tomato-Shadow);
+}
+
+.root {
+  @media (min-width: 50em) {
+    padding: 0 3em;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.newsletter {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 50em) {
+    border-radius: 1.5em;
+    background: var(--White);
+    padding: 1em;
+    min-width: 40em;
+    gap: 1em;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.newsletter_left {
+  margin-top: 1em;
+  padding: 1em;
+  order: 1;
+
+  @media (min-width: 50em) {
+    order: initial;
+  }
+}
+
+.newsletter_title {
+  font-size: 1.5rem;
+
+  @media (min-width: 50em) {
+    font-size: 3rem;
+  }
+}
+
+.newsletter_description,
+.newsletter_features {
+  margin-top: 1em;
+}
+
+.feature {
+  margin-top: 0.5em;
+  gap: 1em;
+  display: flex;
+
+  & > img {
+    max-width: 1.5em;
+    max-height: 1.5em;
+    aspect-ratio: 1/1;
+  }
+
+  @media (min-width: 50em) {
+    align-items: center;
+  }
+}
+
+.newsletter_form {
+  margin-top: 2em;
+}
+
+.form-control {
+  gap: 0.5em;
+  display: flex;
+  flex-direction: column;
+
+  & > input {
+    background: var(--White);
+    border: 1px solid var(--Grey);
+    border-radius: 0.5em;
+    padding: 1em;
+  }
+
+  & > input:focus,
+  & > input:hover {
+    outline: 1px solid var(--Dark-Slate-Grey);
+  }
+
+  & > input:focus::placeholder,
+  & > input:hover::placeholder {
+    color: var(--Dark-Slate-Grey);
+  }
+
+  & > input.invalid {
+    color: var(--Tomato);
+    outline-color: var(--Tomato);
+  }
+
+  &:has(input.invalid) > .form-control_label > span {
+    display: block;
+  }
+}
+
+.form-control_label {
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+
+  & > span {
+    color: var(--Tomato);
+    display: none;
+  }
+}
+
+.newsletter_right {
+  & > picture > img {
+    width: 100%;
+    max-height: 20em;
+    object-fit: cover;
+
+    @media (min-width: 50em) {
+      max-height: 30em;
+    }
+  }
+}
+
+.feedback {
+  padding: 1em;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  & > button {
+    @media (min-width: 50em) {
+      margin-top: 3em;
+    }
+  }
+
+  @media (min-width: 50em) {
+    border-radius: 1.5em;
+    background: var(--White);
+    padding: 3em;
+    max-width: 25em;
+    min-height: auto;
+  }
+}
+
+.feedback_header {
+  margin-top: 3em;
+
+  @media (min-width: 50em) {
+    margin-top: 0;
+  }
+}
+
+.header_title {
+  color: var(--Dark-Slate-Grey);
+  font-size: 3rem;
+  line-height: 1;
+  margin-top: 1em;
+
+  @media (min-width: 50em) {
+    font-size: 2.5rem;
+    margin-top: 0.5em;
+  }
+}
+
+.header_description {
+  color: var(--Charcoal-Grey);
+  margin-top: 1em;
+
+  & > strong {
+    color: var(--Dark-Slate-Grey);
+  }
+}
